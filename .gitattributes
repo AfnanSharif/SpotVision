@@ -1,0 +1,41 @@
+# --- Core language files (ensure detection) ---
+*.py linguist-detectable=true
+*.ipynb linguist-detectable=true
+*.json linguist-detectable=true
+*.yml linguist-detectable=true
+*.yaml linguist-detectable=true
+*.sh linguist-detectable=true
+*.md linguist-detectable=true
+
+# --- Force classify main folders/languages ---
+src/* linguist-language=Python
+notebooks/* linguist-language=Python
+configs/* linguist-language=JSON
+scripts/* linguist-language=Shell
+
+# --- Ignore auto-generated / non-code files ---
+__pycache__/* linguist-vendored
+*.log linguist-vendored
+*.lock linguist-vendored
+*.csv linguist-vendored
+*.pkl linguist-vendored
+*.h5 linguist-vendored
+*.weights linguist-vendored
+*.onnx linguist-vendored
+*.mp4 linguist-vendored
+*.avi linguist-vendored
+*.jpg linguist-vendored
+*.jpeg linguist-vendored
+*.png linguist-vendored
+
+# --- Documentation files ---
+docs/* linguist-language=Markdown
+README.md linguist-language=Markdown
+
+# --- Optional: ensure example/demo folders count toward Python ---
+examples/* linguist-language=Python
+demo/* linguist-language=Python
+
+# --- Treat config or requirement files as plain text (optional) ---
+requirements.txt linguist-language=Text
+setup.py linguist-language=Python
